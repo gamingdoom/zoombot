@@ -211,6 +211,13 @@ namespace zoombot
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            zoomweb zoomweb = new zoomweb(); //this is the change, code for redirect  
+            zoomweb.ShowDialog();
+        }
     }
     public class def
     {

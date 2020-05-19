@@ -48,3 +48,5 @@ C:\Users\psang\source\repos\zoombot\zoombot\obj\Release\zoombot.csproj.CoreCompi
 C:\Users\psang\source\repos\zoombot\zoombot\obj\Release\zoombot.csproj.CopyComplete
 C:\Users\psang\source\repos\zoombot\zoombot\obj\Release\zoombot.exe
 C:\Users\psang\source\repos\zoombot\zoombot\obj\Release\zoombot.pdb
+C:\Users\psang\source\repos\zoombot\zoombot\obj\Release\zoombot.csprojAssemblyReference.cache
+C:\Users\psang\source\repos\zoombot\zoombot\obj\Release\zoombot.zoomweb.resources
