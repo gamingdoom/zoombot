@@ -50,3 +50,4 @@ C:\Users\psang\source\repos\zoombot\zoombot\obj\Release\zoombot.exe
 C:\Users\psang\source\repos\zoombot\zoombot\obj\Release\zoombot.pdb
 C:\Users\psang\source\repos\zoombot\zoombot\obj\Release\zoombot.csprojAssemblyReference.cache
 C:\Users\psang\source\repos\zoombot\zoombot\obj\Release\zoombot.zoomweb.resources
+C:\Users\psang\source\repos\zoombot\zoombot\obj\Release\zoombot.schedule.resources

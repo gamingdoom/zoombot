@@ -14,6 +14,7 @@ using AForge.Imaging;
 using System.Drawing.Imaging;
 using AForge.Imaging.Filters;
 using System.Runtime.CompilerServices;
+using static zoombot.schedule;
 
 namespace zoombot
 {
@@ -23,13 +24,16 @@ namespace zoombot
     {
         public int mx = 0;
         public int my = 0;
-        public static System.Drawing.Point MousePosition { get; }
+        public static new System.Drawing.Point MousePosition { get; }
         string mxdisplay = String.Empty;
         string mydisplay = String.Empty;
         System.Drawing.Point mouse = MousePosition;
         string stringmouse = String.Empty;
         int one = 1;
-        //Mouse actions
+        bool usesch = false;
+        string meetids = schvar.meetids;
+        string passs = schvar.passs;
+         //Mouse actions
 
         private System.Windows.Forms.MouseButtons clicked = MouseButtons;
         [DllImport("user32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
@@ -137,22 +141,24 @@ namespace zoombot
             System.Drawing.Bitmap template = (Bitmap)Bitmap.FromFile(@"C:\Users\psang\Downloads\zoomjoin.jpg");
             SendKeys.Send("{ENTER}");
             Thread.Sleep(500);
-            getinmeeting();
-        }
-        public void getinmeeting()
-        {
             string meetid = textBox3.Text;
             string password = textBox2.Text;
+            getinmeeting(meetid, password);
+        }
+        public void getinmeeting(string meetid, string password)
+        {
+            int lmeettime = 750; 
             Thread.Sleep(250);
             SendKeys.SendWait("{ENTER}");
             Thread.Sleep(750);
+            Thread.Sleep(lmeettime);
             SendKeys.SendWait(meetid);
-            Thread.Sleep(750);
             SendKeys.SendWait("{ENTER}");
             Thread.Sleep(1500);
-            password = textBox2.Text;
             SendKeys.SendWait(password);
             Thread.Sleep(750);
+            SendKeys.SendWait("{ENTER}");
+            Thread.Sleep(10000);
             SendKeys.SendWait("{ENTER}");
         }
         public void findzoom()
@@ -217,6 +223,19 @@ namespace zoombot
             this.Hide();
             zoomweb zoomweb = new zoomweb(); //this is the change, code for redirect  
             zoomweb.ShowDialog();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            schedule schedule = new schedule(); //this is the change, code for redirect  
+            schedule.ShowDialog();
+            usesch = true;
         }
     }
     public class def
