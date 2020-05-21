@@ -54,7 +54,7 @@ namespace zoombot
         }
         public void Writ()
         {
-            if (clicked == MouseButtons)
+            if (clicked == MouseButtons) 
             {
                 mouse = MousePosition;
                 stringmouse = Convert.ToString(mouse);
