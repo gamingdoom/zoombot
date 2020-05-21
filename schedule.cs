@@ -72,7 +72,7 @@ namespace zoombot
             SendKeys.Send(zoom);
             Thread.Sleep(500);
             SendKeys.Send("{ENTER}");
-            Thread.Sleep(500);
+            Thread.Sleep(1500);
             string meetid = textBox2.Text;
             string password = textBox3.Text;
             Thread.Sleep(500);

@@ -49,3 +49,5 @@ C:\Users\psang\source\repos\zoombot\zoombot\bin\Debug\AForge.Video.Ximea.xml
 C:\Users\psang\source\repos\zoombot\zoombot\bin\Debug\AForge.Vision.xml
 C:\Users\psang\source\repos\zoombot\zoombot\obj\Debug\zoombot.csproj.CopyComplete
 C:\Users\psang\source\repos\zoombot\zoombot\obj\Debug\zoombot.Form1.resources
+C:\Users\psang\source\repos\zoombot\zoombot\obj\Debug\zoombot.schedule.resources
+C:\Users\psang\source\repos\zoombot\zoombot\obj\Debug\zoombot.zoomweb.resources
