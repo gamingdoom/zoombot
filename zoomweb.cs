@@ -36,7 +36,9 @@ namespace zoombot
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Form1 form1 = new Form1(); //this is the change, code for redirect  
+            form1.ShowDialog();
         }
     }
 }
