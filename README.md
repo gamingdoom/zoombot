@@ -3,7 +3,7 @@ This will attend zoom meetings for you
 
 Zoombot is an easy to use application that goes to zoom meetings for you!
 
-# How Do I Install This Application?
+# How Do I Install / Setup This Application?
 
 It is very simple.
 
