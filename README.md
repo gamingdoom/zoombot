@@ -17,7 +17,7 @@ It is very simple.
 
 5. Next (optional) create a shortcut by right clicking on the EXE and drag it to the desktop for easy access.
 
-6. Open zoom and make sure that in settings > video > ""turn off my video before joining meeting" is on and "always show video preview dialog before joining meeting" is off
+6. Open zoom and make sure that in settings > video > "turn off my video before joining meeting" is on and "always show video preview dialog before joining meeting" is off
 
 7. Finally, Make sure that there is a little black / dotted box around the "join meeting" button. If it is not there you can press TAB until it moves there. The black / dotted box will stay until you press another button or restart your computer; It will stay even if you close zoom.
 
