@@ -53,17 +53,39 @@ namespace zoombot
             showadds();
 
         }
-
-        public void button2_Click(object sender, EventArgs e)
+        public async void timer()
         {
+            string strmins = textBox1.Text;
+            int mins = Convert.ToInt32(strmins);
+            int secs = 00;
+            for (; ; ) {
+                await Task.Delay(500);
+                textBox4.Text = $"{mins}:{secs}";
+                while (secs != 00)
+                {
+                    await Task.Delay(1000);
+                    --secs;
+                    textBox4.Text = $"{mins}:{secs}";
+                }
+                if (secs == 00 && mins != 0)
+                {
+                    //await Task.Delay(500);
+                    secs = 59;
+                    mins = --mins;
+                }
+                
+            }
+        }
 
-            
+        public async void button2_Click(object sender, EventArgs e)
+        { 
             hideadds();
             string zoom = "zoom";
             int lmeettime = Convert.ToInt32(textBox1.Text);
+            timer();
             lmeettime = lmeettime * 60;
             lmeettime = lmeettime * 1000;
-            Thread.Sleep(lmeettime);
+            await Task.Delay(lmeettime);
             Cursor.Position = new System.Drawing.Point(0, 1080);
             uint X = (uint)Cursor.Position.X;
             uint Y = (uint)Cursor.Position.Y;

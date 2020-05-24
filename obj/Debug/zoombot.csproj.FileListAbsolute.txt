@@ -23,7 +23,6 @@ C:\Users\psang\source\repos\zoombot\zoombot\bin\Debug\AForge.Robotics.Surveyor.d
 C:\Users\psang\source\repos\zoombot\zoombot\bin\Debug\AForge.Robotics.TeRK.dll
 C:\Users\psang\source\repos\zoombot\zoombot\bin\Debug\AForge.Video.DirectShow.dll
 C:\Users\psang\source\repos\zoombot\zoombot\bin\Debug\AForge.Video.dll
-C:\Users\psang\source\repos\zoombot\zoombot\bin\Debug\AForge.Video.FFMPEG.dll
 C:\Users\psang\source\repos\zoombot\zoombot\bin\Debug\AForge.Video.Kinect.dll
 C:\Users\psang\source\repos\zoombot\zoombot\bin\Debug\AForge.Video.VFW.dll
 C:\Users\psang\source\repos\zoombot\zoombot\bin\Debug\AForge.Video.Ximea.dll
@@ -42,7 +41,6 @@ C:\Users\psang\source\repos\zoombot\zoombot\bin\Debug\AForge.Robotics.Surveyor.x
 C:\Users\psang\source\repos\zoombot\zoombot\bin\Debug\AForge.Robotics.TeRK.xml
 C:\Users\psang\source\repos\zoombot\zoombot\bin\Debug\AForge.Video.xml
 C:\Users\psang\source\repos\zoombot\zoombot\bin\Debug\AForge.Video.DirectShow.xml
-C:\Users\psang\source\repos\zoombot\zoombot\bin\Debug\AForge.Video.FFMPEG.xml
 C:\Users\psang\source\repos\zoombot\zoombot\bin\Debug\AForge.Video.Kinect.xml
 C:\Users\psang\source\repos\zoombot\zoombot\bin\Debug\AForge.Video.VFW.xml
 C:\Users\psang\source\repos\zoombot\zoombot\bin\Debug\AForge.Video.Ximea.xml
@@ -51,3 +49,5 @@ C:\Users\psang\source\repos\zoombot\zoombot\obj\Debug\zoombot.csproj.CopyComplet
 C:\Users\psang\source\repos\zoombot\zoombot\obj\Debug\zoombot.Form1.resources
 C:\Users\psang\source\repos\zoombot\zoombot\obj\Debug\zoombot.schedule.resources
 C:\Users\psang\source\repos\zoombot\zoombot\obj\Debug\zoombot.zoomweb.resources
+C:\Users\psang\source\repos\zoombot\zoombot\bin\Debug\Newtonsoft.Json.dll
+C:\Users\psang\source\repos\zoombot\zoombot\bin\Debug\Newtonsoft.Json.xml

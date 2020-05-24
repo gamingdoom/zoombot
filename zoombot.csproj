@@ -119,10 +119,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.Video.DirectShow.dll</HintPath>
     </Reference>
-    <Reference Include="AForge.Video.FFMPEG, Version=2.2.5.0, Culture=neutral, PublicKeyToken=03563089b1be05dd, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.Video.FFMPEG.dll</HintPath>
-    </Reference>
     <Reference Include="AForge.Video.Kinect, Version=2.2.4.0, Culture=neutral, PublicKeyToken=96a9a097745e71d9, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.Video.Kinect.dll</HintPath>
