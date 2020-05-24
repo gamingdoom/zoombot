@@ -13,7 +13,7 @@ using System.Runtime.InteropServices;
 using System.Diagnostics;
 namespace zoombot
 {
-    
+
     public partial class schedule : Form
     {
         [DllImport("user32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
@@ -21,6 +21,9 @@ namespace zoombot
         private const int MOUSEEVENTF_LEFTDOWN = 0x02;
         private const int MOUSEEVENTF_LEFTUP = 0x04;
         private const int MOUSEEVENTF_MOVE = 0x0001;
+        public bool isbuttonclicked = false;
+        public static bool camefromsch = false;
+        public static string schurl = "";
 
 
         public schedule()
@@ -37,6 +40,9 @@ namespace zoombot
             textBox2.Hide();
             textBox3.Hide();
             button2.Hide();
+            textBox5.Hide();
+            label5.Hide();
+            checkBox1.Hide();
         }
         public void showadds()
         {
@@ -47,6 +53,7 @@ namespace zoombot
             textBox2.Show();
             textBox3.Show();
             button2.Show();
+            checkBox1.Show();
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -73,42 +80,50 @@ namespace zoombot
                     secs = 59;
                     mins = --mins;
                 }
-                
+
             }
         }
 
         public async void button2_Click(object sender, EventArgs e)
-        { 
+        {
             hideadds();
-            string zoom = "zoom";
-            int lmeettime = Convert.ToInt32(textBox1.Text);
-            timer();
-            lmeettime = lmeettime * 60;
-            lmeettime = lmeettime * 1000;
-            await Task.Delay(lmeettime);
-            Cursor.Position = new System.Drawing.Point(0, 1080);
-            uint X = (uint)Cursor.Position.X;
-            uint Y = (uint)Cursor.Position.Y;
-            mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, X, Y, 0, 0);
-            Thread.Sleep(500);
-            SendKeys.Send(zoom);
-            Thread.Sleep(500);
-            SendKeys.Send("{ENTER}");
-            Thread.Sleep(1500);
-            string meetid = textBox2.Text;
-            string password = textBox3.Text;
-            Thread.Sleep(500);
-            Thread.Sleep(250);
-            SendKeys.SendWait("{ENTER}");
-            Thread.Sleep(750);
-            SendKeys.SendWait(meetid);
-            SendKeys.SendWait("{ENTER}");
-            Thread.Sleep(1500);
-            SendKeys.SendWait(password);
-            Thread.Sleep(750);
-            SendKeys.SendWait("{ENTER}");
-            Thread.Sleep(10000);
-            SendKeys.SendWait("{ENTER}");
+            isbuttonclicked = true;
+            if (camefromsch == true)
+            {
+
+            }
+            else
+            {
+                string zoom = "zoom";
+                int lmeettime = Convert.ToInt32(textBox1.Text);
+                timer();
+                lmeettime = lmeettime * 60;
+                lmeettime = lmeettime * 1000;
+                await Task.Delay(lmeettime);
+                Cursor.Position = new System.Drawing.Point(0, 1080);
+                uint X = (uint)Cursor.Position.X;
+                uint Y = (uint)Cursor.Position.Y;
+                mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, X, Y, 0, 0);
+                Thread.Sleep(500);
+                SendKeys.Send(zoom);
+                Thread.Sleep(500);
+                SendKeys.Send("{ENTER}");
+                Thread.Sleep(1500);
+                string meetid = textBox2.Text;
+                string password = textBox3.Text;
+                Thread.Sleep(500);
+                Thread.Sleep(250);
+                SendKeys.SendWait("{ENTER}");
+                Thread.Sleep(750);
+                SendKeys.SendWait(meetid);
+                SendKeys.SendWait("{ENTER}");
+                Thread.Sleep(1500);
+                SendKeys.SendWait(password);
+                Thread.Sleep(750);
+                SendKeys.SendWait("{ENTER}");
+                Thread.Sleep(10000);
+                SendKeys.SendWait("{ENTER}");
+            }
         }
         public class schvar
         {
@@ -123,5 +138,46 @@ namespace zoombot
             Form1 form1 = new Form1(); //this is the change, code for redirect  
             form1.ShowDialog();
         }
+
+        public void nothing()
+        {
+
+        }
+        public async void checkBox1_CheckedChanged(object sender, EventArgs e)
+            {
+            
+            if (checkBox1.Checked == true) {
+                textBox2.Hide();
+                textBox3.Hide();
+                label2.Hide();
+                label3.Hide();
+                textBox5.Show();
+                label5.Show();
+            }
+            else {
+                hideadds();
+                showadds();
+            }
+            for (; ; )
+            { 
+                if (isbuttonclicked == true && checkBox1.Checked == true)
+                {
+                    camefromsch = true;
+                    int lmeettime = Convert.ToInt32(textBox1.Text);
+                    schurl = textBox5.Text;
+                    timer();
+                    lmeettime = lmeettime * 60;
+                    lmeettime = lmeettime * 1000;
+                    await Task.Delay(lmeettime);
+                    this.Hide();
+                    zoomweb zoomweb = new zoomweb(); //this is the change, code for redirect  
+                    zoomweb.ShowDialog();
+                }
+                else {
+                    await Task.Delay(50);
+                }
+            }
+        }
     }
+    
 }

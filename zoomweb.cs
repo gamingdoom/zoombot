@@ -21,7 +21,15 @@ namespace zoombot
 
         private void zoomweb_Load(object sender, EventArgs e)
         {
-
+            if (schedule.camefromsch == true)
+            {
+                label1.Hide();
+                textBox1.Hide();
+                button1.Hide();
+                string schurl = schedule.schurl;
+                webBrowser1.Show();
+                webBrowser1.Url = new System.Uri(schurl);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -39,6 +47,11 @@ namespace zoombot
             this.Hide();
             Form1 form1 = new Form1(); //this is the change, code for redirect  
             form1.ShowDialog();
+        }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
         }
     }
 }
