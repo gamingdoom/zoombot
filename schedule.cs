@@ -25,7 +25,6 @@ namespace zoombot
         public static bool camefromsch = false;
         public static string schurl = "";
 
-
         public schedule()
         {
             InitializeComponent();
@@ -43,6 +42,8 @@ namespace zoombot
             textBox5.Hide();
             label5.Hide();
             checkBox1.Hide();
+            label6.Hide();
+            textBox6.Hide();
         }
         public void showadds()
         {
@@ -54,13 +55,15 @@ namespace zoombot
             textBox3.Show();
             button2.Show();
             checkBox1.Show();
+            label6.Show();
+            textBox6.Show();
         }
         private void button1_Click(object sender, EventArgs e)
         {
             showadds();
 
         }
-        public async void timer()
+        public async void timertillmeet()
         {
             string strmins = textBox1.Text;
             int mins = Convert.ToInt32(strmins);
@@ -83,6 +86,30 @@ namespace zoombot
 
             }
         }
+        public async void timerend()
+        {
+            string strmins = textBox6.Text;
+            int mins = Convert.ToInt32(strmins);
+            int secs = 00;
+            for (; ; )
+            {
+                await Task.Delay(500);
+                textBox7.Text = $"{mins}:{secs}";
+                while (secs != 00)
+                {
+                    await Task.Delay(1000);
+                    --secs;
+                    textBox7.Text = $"{mins}:{secs}";
+                }
+                if (secs == 00 && mins != 0)
+                {
+                    //await Task.Delay(500);
+                    secs = 59;
+                    mins = --mins;
+                }
+            }
+        }
+
 
         public async void button2_Click(object sender, EventArgs e)
         {
@@ -96,7 +123,7 @@ namespace zoombot
             {
                 string zoom = "zoom";
                 int lmeettime = Convert.ToInt32(textBox1.Text);
-                timer();
+                timertillmeet();
                 lmeettime = lmeettime * 60;
                 lmeettime = lmeettime * 1000;
                 await Task.Delay(lmeettime);
@@ -111,6 +138,9 @@ namespace zoombot
                 Thread.Sleep(1500);
                 string meetid = textBox2.Text;
                 string password = textBox3.Text;
+                int until = Convert.ToInt32(textBox6.Text);
+                until = until * 1000;
+                until = until * 60;
                 Thread.Sleep(500);
                 Thread.Sleep(250);
                 SendKeys.SendWait("{ENTER}");
@@ -122,6 +152,11 @@ namespace zoombot
                 Thread.Sleep(750);
                 SendKeys.SendWait("{ENTER}");
                 Thread.Sleep(10000);
+                SendKeys.SendWait("{ENTER}");
+                timerend();
+                await Task.Delay(until);
+                SendKeys.SendWait("%q");
+                Thread.Sleep(1000);
                 SendKeys.SendWait("{ENTER}");
             }
         }
@@ -165,7 +200,7 @@ namespace zoombot
                     camefromsch = true;
                     int lmeettime = Convert.ToInt32(textBox1.Text);
                     schurl = textBox5.Text;
-                    timer();
+                    timertillmeet();
                     lmeettime = lmeettime * 60;
                     lmeettime = lmeettime * 1000;
                     await Task.Delay(lmeettime);
@@ -177,6 +212,16 @@ namespace zoombot
                     await Task.Delay(50);
                 }
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            timerend();
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            timerend();
         }
     }
     

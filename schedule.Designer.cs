@@ -43,6 +43,11 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -105,7 +110,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(49, 426);
+            this.button2.Location = new System.Drawing.Point(48, 498);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(101, 41);
             this.button2.TabIndex = 7;
@@ -168,11 +173,60 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Link";
             // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(48, 451);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 31);
+            this.textBox6.TabIndex = 14;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(43, 423);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(256, 25);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Meeting Length (minutes)";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(577, 65);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(240, 25);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Time until meeting ends";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBox7.Location = new System.Drawing.Point(582, 93);
+            this.textBox7.Multiline = true;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(232, 72);
+            this.textBox7.TabIndex = 16;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(433, 294);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(194, 67);
+            this.button4.TabIndex = 18;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            // 
             // schedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(990, 851);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.checkBox1);
@@ -211,5 +265,10 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Button button4;
     }
 }
