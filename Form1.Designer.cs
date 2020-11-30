@@ -61,14 +61,14 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(412, 200);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(182, 31);
+            this.textBox3.Size = new System.Drawing.Size(182, 20);
             this.textBox3.TabIndex = 3;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(412, 270);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(175, 31);
+            this.textBox2.Size = new System.Drawing.Size(175, 20);
             this.textBox2.TabIndex = 4;
             // 
             // label1
@@ -76,7 +76,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(407, 172);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 25);
+            this.label1.Size = new System.Drawing.Size(59, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Meeting ID";
             // 
@@ -85,16 +85,16 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(407, 242);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 25);
+            this.label2.Size = new System.Drawing.Size(97, 13);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Password";
+            this.label2.Text = "Password (hashed)";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(47, 342);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(313, 25);
+            this.label4.Size = new System.Drawing.Size(156, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "What to do before you press go";
             // 
@@ -113,7 +113,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(12, 570);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(1303, 25);
+            this.label5.Size = new System.Drawing.Size(639, 13);
             this.label5.TabIndex = 9;
             this.label5.Text = "launch zoom before (this will save between zoom closing and opening) make sure yo" +
     "u press tab so the box is hovering over go like this";
@@ -133,7 +133,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(407, 355);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(456, 25);
+            this.label6.Size = new System.Drawing.Size(224, 13);
             this.label6.TabIndex = 11;
             this.label6.Text = "Make sure these are like this in settings>video";
             // 

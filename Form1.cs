@@ -17,6 +17,7 @@ using System.Runtime.CompilerServices;
 using static zoombot.schedule;
 using System.Drawing.Imaging;
 using AForge.Imaging;
+using System.Diagnostics;
 
 namespace zoombot
 {
@@ -46,7 +47,7 @@ namespace zoombot
         public Form1()
         {
             InitializeComponent();
-            Mousexy();
+            //Mousexy();
         }
 
         public void Mousexy()
@@ -139,29 +140,36 @@ namespace zoombot
 
         public void openzoom()
         {
-            System.Drawing.Bitmap image = (Bitmap)Bitmap.FromFile(@"C:\Users\psang\Downloads\zoompos1.jpg");
-            System.Drawing.Bitmap template = (Bitmap)Bitmap.FromFile(@"C:\Users\psang\Downloads\zoomjoin.jpg");
-            SendKeys.Send("{ENTER}");
-            Thread.Sleep(500);
+            //System.Drawing.Bitmap image = (Bitmap)Bitmap.FromFile(@"C:\Users\psang\Downloads\zoompos1.jpg");
+            //System.Drawing.Bitmap template = (Bitmap)Bitmap.FromFile(@"C:\Users\psang\Downloads\zoomjoin.jpg");
+           // SendKeys.Send("{ENTER}");
+            //Thread.Sleep(500);
             string meetid = textBox3.Text;
             string password = textBox2.Text;
             getinmeeting(meetid, password);
         }
         public void getinmeeting(string meetid, string password)
         {
-            int lmeettime = 750; 
-            Thread.Sleep(250);
-            SendKeys.SendWait("{ENTER}");
-            Thread.Sleep(750);
-            Thread.Sleep(lmeettime);
-            SendKeys.SendWait(meetid);
-            SendKeys.SendWait("{ENTER}");
-            Thread.Sleep(1500);
-            SendKeys.SendWait(password);
-            Thread.Sleep(750);
-            SendKeys.SendWait("{ENTER}");
-            Thread.Sleep(10000);
-            SendKeys.SendWait("{ENTER}");
+            Process process = new Process();
+            ProcessStartInfo startInfo = new ProcessStartInfo();
+            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            startInfo.FileName = "cmd.exe";
+            startInfo.Arguments = $"/C start zoommtg://zoom.us/join?confno={meetid}^&pwd={password}";
+            process.StartInfo = startInfo;
+            process.Start();
+            //int lmeettime = 750; 
+            //Thread.Sleep(250);
+            //SendKeys.SendWait("{ENTER}");
+            //Thread.Sleep(750);
+            //Thread.Sleep(lmeettime);
+            //SendKeys.SendWait(meetid);
+            //SendKeys.SendWait("{ENTER}");
+            //Thread.Sleep(1500);
+            //SendKeys.SendWait(password);
+            //Thread.Sleep(750);
+            //SendKeys.SendWait("{ENTER}");
+            //Thread.Sleep(10000);
+            //SendKeys.SendWait("{ENTER}");
         }
         public void findzoom()
         {
@@ -211,7 +219,7 @@ namespace zoombot
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Win();
+            openzoom();
 
         }
 
