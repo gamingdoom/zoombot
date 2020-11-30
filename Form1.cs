@@ -9,12 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
-using AForge;
-using AForge.Imaging;
-using System.Drawing.Imaging;
-using AForge.Imaging.Filters;
+//using AForge;
+//using AForge.Imaging;
+//using System.Drawing.Imaging;
+//using AForge.Imaging.Filters;
 using System.Runtime.CompilerServices;
 using static zoombot.schedule;
+using System.Drawing.Imaging;
+using AForge.Imaging;
 
 namespace zoombot
 {

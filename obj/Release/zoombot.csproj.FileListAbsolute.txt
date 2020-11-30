@@ -51,3 +51,5 @@ C:\Users\psang\source\repos\zoombot\zoombot\obj\Release\zoombot.zoomweb.resource
 C:\Users\psang\source\repos\zoombot\zoombot\obj\Release\zoombot.schedule.resources
 C:\Users\psang\source\repos\zoombot\zoombot\bin\Release\Newtonsoft.Json.dll
 C:\Users\psang\source\repos\zoombot\zoombot\bin\Release\Newtonsoft.Json.xml
+E:\Downloads\zoombot\obj\Release\zoombot.exe
+E:\Downloads\zoombot\obj\Release\zoombot.pdb

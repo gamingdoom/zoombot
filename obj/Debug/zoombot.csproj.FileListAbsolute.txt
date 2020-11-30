@@ -51,3 +51,16 @@ C:\Users\psang\source\repos\zoombot\zoombot\obj\Debug\zoombot.schedule.resources
 C:\Users\psang\source\repos\zoombot\zoombot\obj\Debug\zoombot.zoomweb.resources
 C:\Users\psang\source\repos\zoombot\zoombot\bin\Debug\Newtonsoft.Json.dll
 C:\Users\psang\source\repos\zoombot\zoombot\bin\Debug\Newtonsoft.Json.xml
+E:\Downloads\zoombot\obj\Debug\zoombot.csprojAssemblyReference.cache
+E:\Downloads\zoombot\obj\Debug\zoombot.Form1.resources
+E:\Downloads\zoombot\obj\Debug\zoombot.Properties.Resources.resources
+E:\Downloads\zoombot\obj\Debug\zoombot.schedule.resources
+E:\Downloads\zoombot\obj\Debug\zoombot.zoomweb.resources
+E:\Downloads\zoombot\obj\Debug\zoombot.csproj.GenerateResource.cache
+E:\Downloads\zoombot\obj\Debug\zoombot.csproj.CoreCompileInputs.cache
+C:\bin\Debug\zoombot.exe.config
+C:\bin\Debug\zoombot.exe
+C:\bin\Debug\zoombot.pdb
+E:\Downloads\zoombot\obj\Debug\zoombot.csproj.CopyComplete
+E:\Downloads\zoombot\obj\Debug\zoombot.exe
+E:\Downloads\zoombot\obj\Debug\zoombot.pdb
